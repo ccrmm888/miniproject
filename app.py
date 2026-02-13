@@ -13,12 +13,12 @@ def index():
     prediction = None
 
     if request.method == "POST":
-        study_hours = float(request.form["study_hours"])
+        reading_hours = float(request.form["reading_hours"])
         attendance_rate = float(request.form["attendance_rate"])
         late_submission_rate = float(request.form["late_submission_rate"])
         midterm_score = float(request.form["midterm_score"])
 
-        input_data = np.array([[study_hours,
+        input_data = np.array([[reading_hours,
                                 attendance_rate,
                                 late_submission_rate,
                                 midterm_score]])
